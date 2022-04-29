@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    <ui:composition template="plantillaAdmin.xhtml">
+	
+	
+	<ui:define name="contentAdmin">
+	<h:form  id="form">
+ 
+  <p:panel header="Generar Encuesta" footer="Tutosoftware" style="color:white" >
+	
+   <h:panelGrid columns="3" cellpadding="5">
+<h:outputLabel value="Nombre de la encuesta:" for="nombreEncuesta"  style="color:white" />
+<p:inputText id="nombreEncuesta"   value="#{generarEncuestaView.nombreEncuesta}" 
+ size="100" required="true" requiredMessage="Nombre de la encuesta requerida" >
+</p:inputText>
+<p:message for="nombreEncuesta"   ></p:message>
+
+<h:outputLabel value="Pregunta1 si/no:" for="pregunta1SiNo"  style="color:white" />
+<p:inputText id="pregunta1SiNo"   value="#{generarEncuestaView.pregunta1SiNo}" 
+ size="100" required="true" requiredMessage="Pregunta requerida" >
+</p:inputText>
+<p:message for="pregunta1SiNo"></p:message>
+
+<h:outputLabel value="Pregunta2 si/no:" for="pregunta2SiNo"  style="color:white" />
+<p:inputText id="pregunta2SiNo"   value="#{generarEncuestaView.pregunta2SiNo}" 
+ size="100" required="true"  requiredMessage="Pregunta requerida"  >
+</p:inputText>
+<p:message for="pregunta2SiNo"></p:message>
+
+<h:outputLabel value="Pregunta3 si/no:" for="pregunta3SiNo"  style="color:white" />
+<p:inputText id="pregunta3SiNo"   value="#{generarEncuestaView.pregunta3SiNo}" 
+ size="100" required="true"  requiredMessage="Pregunta requerida"  >
+</p:inputText>
+<p:message for="pregunta3SiNo"></p:message>
+
+<h:outputLabel value="Pregunta4 si/no:" for="pregunta4SiNo"  style="color:white" />
+<p:inputText id="pregunta4SiNo"   value="#{generarEncuestaView.pregunta4SiNo}" 
+ size="100" required="true" requiredMessage="Pregunta requerida" >
+</p:inputText>
+<p:message for="pregunta4SiNo"></p:message>
+
+<h:outputLabel value="Pregunta5 si/no:" for="pregunta5SiNo"  style="color:white" />
+<p:inputText id="pregunta5SiNo"   value="#{generarEncuestaView.pregunta5SiNo}" 
+ size="100" required="true"  requiredMessage="Pregunta requerida" >
+</p:inputText>
+<p:message for="pregunta5SiNo"></p:message>
+
+<h:outputLabel value="Pregunta6 si/no:" for="pregunta6SiNo"  style="color:white" />
+<p:inputText id="pregunta6SiNo"   value="#{generarEncuestaView.pregunta6SiNo}" 
+ size="100" required="true" requiredMessage="Pregunta requerida" >
+</p:inputText>
+<p:message for="pregunta6SiNo"></p:message>
+	
+<h:outputLabel value="Pregunta7 si/no:" for="pregunta7SiNo"  style="color:white" />
+<p:inputText id="pregunta7SiNo"   value="#{generarEncuestaView.pregunta7SiNo}" 
+ size="100" required="true" requiredMessage="Pregunta requerida" >
+</p:inputText>	
+<p:message for="pregunta6SiNo"></p:message>	
+
+<h:outputLabel value="Pregunta8 Texto abierto:" for="pregunta8Texto"  style="color:white" />
+<p:inputText id="pregunta8Texto"   value="#{generarEncuestaView.pregunta8Texto}" 
+ size="100" required="true" requiredMessage="Pregunta requerida">
+</p:inputText>	
+<p:message for="pregunta8Texto"></p:message>
+
+<h:outputLabel value="Pregunta9 Calif1-5:" for="pregunta9Calif"  style="color:white" />
+<p:inputText id="pregunta9Calif"   value="#{generarEncuestaView.pregunta9Calif}" 
+ size="100" required="true" requiredMessage="Pregunta requerida">
+</p:inputText>
+<p:message for="pregunta9Calif"></p:message>	
+
+<h:outputLabel value="Pregunta10 Calif1-5:" for="pregunta10Calif"  style="color:white" />
+<p:inputText id="pregunta10Calif"   value="#{generarEncuestaView.pregunta10Calif}" 
+ size="100" required="true" requiredMessage="Pregunta requerida" >
+</p:inputText>
+<p:message for="pregunta10Calif"></p:message>
+
+
+<p:commandButton  value="Crear Encuesta"  action="#{generarEncuestaView.crearEncuesta}" update="form" ></p:commandButton>
+
+
+
+</h:panelGrid>		
+</p:panel>	
+ </h:form>	
+	
+	
+	
+	</ui:define>
+	
+	
+	
+	
+	</ui:composition>
+    
+        
+        
+                
+        
+    </h:body>
+</html>

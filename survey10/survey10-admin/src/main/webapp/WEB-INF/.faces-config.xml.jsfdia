@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="admin::#admin.xhtml" NAME="output"
+    PATH="/admin.xhtml" TARGET="rules:#admin.xhtml" TITLE="admin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#admin.xhtml" PATH="/admin.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#historialEncuesta.xhtml"
+  PATH="/historialEncuesta.xhtml" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#historialEncuesta.xhtml:0" NAME="item"
+   PATH="/historialEncuesta.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="grafico::#graficoEncuesta.xhtml"
+    NAME="output" PATH="/graficoEncuesta.xhtml"
+    TARGET="rules:#graficoEncuesta.xhtml" TITLE="grafico" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#historialEncuesta.xhtml:1" NAME="item1"
+   PATH="/historialEncuesta.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="texto::#respuestaEncuesta.xhtml"
+    NAME="output" PATH="/respuestaEncuesta.xhtml"
+    TARGET="rules:#respuestaEncuesta.xhtml" TITLE="texto" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#graficoEncuesta.xhtml"
+  PATH="/graficoEncuesta.xhtml" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#respuestaEncuesta.xhtml"
+  PATH="/respuestaEncuesta.xhtml" SHAPE="256,289,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

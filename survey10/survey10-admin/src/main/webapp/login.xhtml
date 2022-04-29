@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+   
+ <ui:composition template="plantilla.xhtml" >
+ <ui:define name="content"  >
+ 
+ 
+ 
+ <h:form>
+ <p:growl id="messagesLogin"/>
+  <p:panel header="Ingresar usuario y contraseña" footer="Tutosoftware">
+  
+  
+  <h:panelGrid columns="2" cellpadding="5">
+<h:outputLabel value="Email:" for="email"  style="color:white" />
+<p:inputText id="email"   value="#{loginView.email}" required="true" label="usuario">
+</p:inputText>
+
+<h:outputLabel value="Contraseña:" for="password" style="color:white"  />
+<p:password id="password" value="#{loginView.password}"     required="true" label="password">
+</p:password>
+
+<f:facet name="footer">
+
+<p:commandButton  value="Acceder" action="#{loginView.loginSurvey}" update="messagesLogin" ></p:commandButton>
+
+</f:facet>
+
+</h:panelGrid>
+  
+  
+  
+  
+        
+   </p:panel>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </h:form>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </ui:define>
+ </ui:composition>
+ 
+        
+    </h:body>
+</html>

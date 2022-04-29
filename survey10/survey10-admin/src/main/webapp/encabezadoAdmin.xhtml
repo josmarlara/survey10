@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jstl/core">
+  
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    
+    <ui:composition>
+        <div class="card">
+    <h:form>
+<p:growl id="messages"/>
+<p:menubar>
+<p:submenu label="Encuesta" icon="ui-icon-document">
+
+<p:menuitem value="Generar Encuesta"  outcome="generarEncuesta.xhtml" />
+<p:separator />
+
+</p:submenu>
+<p:submenu label="Historial" icon="ui-icon-pencil">
+<p:menuitem value="Historial Encuestas" outcome="historialEncuesta"/>
+
+</p:submenu>
+
+
+<p:menuitem value="Salir" action="#{loginView.logout()}" icon="ui-icon-close" />
+
+</p:menubar>
+
+</h:form>
+
+</div>
+        
+    </ui:composition>    
+                
+        
+    </h:body>
+</html>

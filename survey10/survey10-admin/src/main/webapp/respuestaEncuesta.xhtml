@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jstl/core">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    <ui:composition template="plantillaAdmin.xhtml">
+	
+	
+	<ui:define name="contentAdmin"  >
+	<h:form  id="form">
+ 
+  <p:panel header="Respuestas Abiertas" footer="Tutosoftware" style="color:white" >
+	
+ 	
+ 	<h1>Respuestas a la pregunta8: #{estadisticaEncuestaView.re.pregunta8Texto} </h1>
+ 	
+ 	
+ 	
+ 	<div class="card">
+        <p:dataTable var="respuesta" value="#{estadisticaEncuestaView.listaRespuestas}"
+        rowIndexVar="index" row="10" paginator="true">
+        
+          <p:column headerText="# Respuesta">
+        <f:facet name="respuesta">
+            <h:outputText value="index" />
+        </f:facet>
+        <h:outputText 
+            value="#{index + 1}"  />
+    </p:column>
+        
+        
+        
+            <p:column headerText="Respuesta">
+                <h:outputText value="#{respuesta}" />
+            </p:column>
+
+           
+            
+        </p:dataTable>
+    </div>
+ 	
+ 	
+ 	
+</p:panel>	
+ </h:form>	
+	
+	
+	
+	</ui:define>
+	
+	
+	
+	
+	</ui:composition>
+    
+        
+        
+                
+        
+    </h:body>
+</html>

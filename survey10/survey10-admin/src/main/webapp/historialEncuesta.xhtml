@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jstl/core">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    <ui:composition template="plantillaAdmin.xhtml">
+	
+	
+	<ui:define name="contentAdmin"  >
+	<h:form  id="form">
+ 
+  <p:panel header="Historial de Encuestas Generadas" footer="Tutosoftware" style="color:white" >
+	
+ 	
+ 	<div class="card">
+        <p:dataTable var="listaEncuesta" value="#{historialEncuestaView.listaEncuesta}"
+        rowIndexVar="index" row="10" paginator="true">
+        
+          <p:column headerText="# Encuesta">
+        <f:facet name="encuesta">
+            <h:outputText value="index" />
+        </f:facet>
+        <h:outputText 
+            value="#{index + 1}"  />
+    </p:column>
+        
+        
+        
+            <p:column headerText="Nombre de la encuesta">
+                <h:outputText value="#{listaEncuesta.nombreEncuesta}" />
+            </p:column>
+
+            <p:column headerText="Status 0=Desactivada 1=Activa">
+             
+            <h:outputText value="#{listaEncuesta.activarEncuesta}" />
+            
+            </p:column>
+            
+            
+            <p:column headerText="Ver Encuestas">
+             
+           <p:commandButton  value="Mostrar Estadística" 
+           action="#{estadisticaEncuestaView.mostrarEstadisticoEncuesta(listaEncuesta.tablaEncuesta)}" >
+           </p:commandButton>
+            
+            </p:column>
+            
+              <p:column headerText="Preguntas Abiertas">
+             
+           <p:commandButton  value="Mostrar Respuestas" 
+           action="#{estadisticaEncuestaView.mostrarRespuestaAbiertas(listaEncuesta.tablaEncuesta)}" >
+           </p:commandButton>
+            
+            </p:column>
+            
+        </p:dataTable>
+    </div>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+</p:panel>	
+ </h:form>	
+	
+	
+	
+	</ui:define>
+	
+	
+	
+	
+	</ui:composition>
+    
+        
+        
+                
+        
+    </h:body>
+</html>

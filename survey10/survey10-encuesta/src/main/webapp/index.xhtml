@@ -1,0 +1,137 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    
+   
+        <div class="card">
+    <h:form  id="form">
+<p:growl id="messages"/>
+<p:menubar>
+<p:submenu label="Administrar" icon="ui-icon-document">
+<p:menuitem value="Admin"  url="http://localhost:8090/surveyadmin/" />
+
+<p:separator />
+
+</p:submenu>
+
+</p:menubar>
+
+
+  <p:card style="width: 80em; margin-bottom: 2em;color:white">
+    <f:facet name="title">
+        #{encuestaView.re.nombreEncuesta}
+    </f:facet>
+
+   <h3>1. #{encuestaView.re.pregunta1SiNo}</h3>
+   <p:selectOneRadio id="respuesta1SiNo" value="#{encuestaView.respuesta1SiNo}" unselectable="true" 
+   style="color:white"  requiredMessage="respuesta requerida" required="true"  >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+   <p:message for="respuesta1SiNo"></p:message>
+   
+   <h3>2. #{encuestaView.re.pregunta2SiNo}</h3>
+   <p:selectOneRadio id="respuesta2SiNo" value="#{encuestaView.respuesta2SiNo}" unselectable="true"
+   style="color:white" requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+   <p:message for="respuesta2SiNo"></p:message>
+   
+   <h3>3. #{encuestaView.re.pregunta3SiNo}</h3>
+   <p:selectOneRadio id="respuesta3SiNo" value="#{encuestaView.respuesta3SiNo}" unselectable="true"
+   style="color:white" requiredMessage="respuesta requerida" required="true"   >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+  <p:message for="respuesta3SiNo"></p:message> 
+
+  <h3>4. #{encuestaView.re.pregunta4SiNo}</h3>
+   <p:selectOneRadio id="respuesta4SiNo" value="#{encuestaView.respuesta4SiNo}" unselectable="true"
+   style="color:white" requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+  <p:message for="respuesta4SiNo"></p:message>
+
+  <h3>5. #{encuestaView.re.pregunta5SiNo}</h3>
+   <p:selectOneRadio id="respuesta5SiNo" value="#{encuestaView.respuesta5SiNo}" unselectable="true"
+   style="color:white" requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+ <p:message for="respuesta5SiNo"></p:message>
+
+ <h3>6. #{encuestaView.re.pregunta6SiNo}</h3>
+   <p:selectOneRadio id="respuesta6SiNo" value="#{encuestaView.respuesta6SiNo}" unselectable="true"
+   style="color:white"  requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+  <p:message for="respuesta6SiNo"></p:message>
+  
+  <h3>7. #{encuestaView.re.pregunta7SiNo}</h3>
+   <p:selectOneRadio id="respuesta7SiNo" value="#{encuestaView.respuesta7SiNo}" unselectable="true"
+   style="color:white" requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="Si" itemValue="Si"/>
+            <f:selectItem itemLabel="No" itemValue="No"/>
+  </p:selectOneRadio>
+  <p:message for="respuesta7SiNo"></p:message>
+  
+  <h3>8. #{encuestaView.re.pregunta8Texto}</h3>
+  <p:inputTextarea rows="5" cols="30"  id="respuesta8Texto" counter="display" 
+      value="#{encuestaView.respuesta8Texto}"         maxlength="500"
+    requiredMessage="respuesta requerida" required="true"    counterTemplate="{0} número de caracteres escritos." autoResize="false"/>
+   
+      <h:outputText id="display" class="p-d-block" />
+  <br/>
+ <p:message for="respuesta8Texto"></p:message> 
+  
+  <h3>9. #{encuestaView.re.pregunta9Calif}</h3>
+  <p:selectOneButton value="#{encuestaView.respuesta9Calif}" requiredMessage="respuesta requerida" required="true" id="respuesta9Calif" >
+            <f:selectItem itemLabel="1. Malo" itemValue="malo"/>
+            <f:selectItem itemLabel="2. Regular" itemValue="regular"/>
+            <f:selectItem itemLabel="3. Bueno" itemValue="bueno"/>
+            <f:selectItem itemLabel="4. Muy bueno" itemValue="muy bueno"/>
+            <f:selectItem itemLabel="5. Excelente" itemValue="excelente"/>
+   </p:selectOneButton>
+   <p:message for="respuesta9Calif"></p:message>
+
+ <h3>10. #{encuestaView.re.pregunta10Calif}</h3>
+  <p:selectOneButton id="respuesta10Calif"  value="#{encuestaView.respuesta10Calif}"  requiredMessage="respuesta requerida" required="true" >
+            <f:selectItem itemLabel="1. Malo" itemValue="malo"/>
+            <f:selectItem itemLabel="2. Regular" itemValue="regular"/>
+            <f:selectItem itemLabel="3. Bueno" itemValue="bueno"/>
+            <f:selectItem itemLabel="4. Muy bueno" itemValue="muy bueno"/>
+            <f:selectItem itemLabel="5. Excelente" itemValue="excelente"/>
+  </p:selectOneButton>
+  <p:message for="respuesta10Calif"></p:message>
+  
+<br/><br/><br/>
+<p:commandButton  value="Guardar Encuesta"   action="#{encuestaView.insertarEncuesta}"   update="form"></p:commandButton>
+</p:card>
+
+
+
+
+
+
+
+
+</h:form>
+
+</div>
+        
+    
+                
+        
+    </h:body>
+</html>

@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jstl/core">
+    
+    <h:head>
+    </h:head>
+
+    <h:body>
+    
+    <ui:composition template="plantillaAdmin.xhtml">
+	
+	
+	<ui:define name="contentAdmin"  >
+	<h:form  id="form">
+ 
+  <p:panel header="Estadísticas" footer="Tutosoftware" style="color:white" >
+	
+ 	
+ 	<h1>Número de encuestas respondidas es #{estadisticaEncuestaView.estadistica.totalRespuesta}</h1>
+ 	
+ 	<h4>Pregunta1: #{estadisticaEncuestaView.re.pregunta1SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel1}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<h4>Pregunta2: #{estadisticaEncuestaView.re.pregunta2SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel2}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<h4>Pregunta3: #{estadisticaEncuestaView.re.pregunta3SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel3}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<h4>Pregunta4: #{estadisticaEncuestaView.re.pregunta4SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel4}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	
+ 	<h4>Pregunta5: #{estadisticaEncuestaView.re.pregunta5SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel5}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<h4>Pregunta6: #{estadisticaEncuestaView.re.pregunta6SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel6}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<h4>Pregunta7: #{estadisticaEncuestaView.re.pregunta7SiNo}</h4>
+ 	
+ 	<div class="card">
+    <p:pieChart model="#{estadisticaEncuestaView.pieModel7}" style="width: 100%; height: 400px;"/>
+    </div>
+ 	
+ 	<div class="card">
+    <h5>#{estadisticaEncuestaView.re.pregunta9Calif}</h5>
+    <p:barChart model="#{estadisticaEncuestaView.barModel}" style="width: 100%; height: 500px;"/>
+    </div>
+ 	
+ 	<div class="card">
+    <h5>#{estadisticaEncuestaView.re.pregunta10Calif}</h5>
+    <p:barChart model="#{estadisticaEncuestaView.barModel2}" style="width: 100%; height: 500px;"/>
+    </div>
+ 	
+</p:panel>	
+ </h:form>	
+	
+	
+	
+	</ui:define>
+	
+	
+	
+	
+	</ui:composition>
+    
+        
+        
+                
+        
+    </h:body>
+</html>

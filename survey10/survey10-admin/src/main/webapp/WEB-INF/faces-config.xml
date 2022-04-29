@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+    
+<navigation-rule>
+<from-view-id>
+/login.xhtml
+</from-view-id>
+<navigation-case>
+<from-outcome>
+admin
+</from-outcome>
+<to-view-id>
+/admin.xhtml
+</to-view-id>
+</navigation-case>
+</navigation-rule>
+    
+ <navigation-rule>
+<from-view-id>
+/historialEncuesta.xhtml
+</from-view-id>
+<navigation-case>
+<from-outcome>
+grafico
+</from-outcome>
+<to-view-id>
+/graficoEncuesta.xhtml
+</to-view-id>
+</navigation-case>
+</navigation-rule>
+    
+<navigation-rule>
+<from-view-id>
+/historialEncuesta.xhtml
+</from-view-id>
+<navigation-case>
+<from-outcome>
+texto
+</from-outcome>
+<to-view-id>
+/respuestaEncuesta.xhtml
+</to-view-id>
+</navigation-case>
+</navigation-rule>    
+    
+    
+    
+    
+
+</faces-config>
